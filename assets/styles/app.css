@@ -1,0 +1,262 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  background: #2c2c2c;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin: 1rem 0.5rem;
+}
+
+progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 80%;
+  height: 2rem;
+  color: #ff0062;
+  border: 1px solid #a927f5;
+}
+
+progress[value]::-webkit-progress-bar,
+progress[value] {
+  background-color: #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress[value]::-webkit-progress-value {
+  background-color: #a927f5;
+  transition: all 0.2s ease-out;
+}
+
+progress[value]::-moz-progress-bar {
+  background-color: #a927f5;
+  transition: all 0.2s ease-out;
+}
+
+button {
+  font: inherit;
+  background: #ff0062;
+  border: 1px solid #ff0062;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0.5rem;
+  width: 150px;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled{
+  opacity: 0.5;
+}
+
+button:hover,
+button:active {
+  background: #a927f5;
+  border-color: #a927f5;
+}
+
+#container-head-title{
+  margin: 2rem auto;
+  width: 30rem;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: white;
+}
+
+#score-board_{
+  margin: 2rem auto;
+  width: 30rem;
+  height: 15rem;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  background: white;
+  overflow-y: scroll;
+}
+
+p,
+label {
+  font: 15px 'Exo 2', sans-serif;
+}
+
+#questions-container {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin:0;
+  height: 3rem;
+  padding-left: 0;
+}
+
+#container-btn{
+  margin-top: 3rem;
+}
+
+#question{
+  height: 5rem;
+}
+
+#container-top-head{
+  margin: 2rem auto;
+  width: 30rem;
+  text-align: center;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 25%);
+  background: white;
+  height: 1rem;
+}
+#container-top-head{
+  display: flex;
+  justify-content: space-between;
+}
+#actual-score{
+  margin:0;
+}
+#answer-given{
+  margin:0;
+}
+.card {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+.modal {
+  position: fixed;
+  z-index: 100;
+  width: 80%;
+  top: 30vh;
+  left: 10%;
+  display: none;
+}
+
+.modal.visible {
+  display: flex;
+  flex-direction: column;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+
+.modal .modal__title {
+  margin: 0;
+  padding: 1rem;
+  border-bottom: 1px solid #00329e;
+  background: #00329e;
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal .modal__content {
+  padding: 1rem;
+}
+
+.modal .modal__actions {
+  padding: 1rem;
+  display: flex;
+  flex-direction: inherit;
+  align-items: center;
+}
+
+
+#backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+  pointer-events: none;
+  display: none;
+}
+
+#backdrop.visible {
+  display: block;
+  pointer-events: all;
+}
+
+#add-modal .modal__content{
+  display: flex;
+  flex-direction: row;
+}
+
+#add-modal2 .modal__content  {
+  display: flex;
+  flex-direction: row;
+}
+
+#paragraph-final-score{
+  display: flex;
+  justify-content: center;
+}
+#paragraph-answer-given-correct{
+  display: flex;
+  justify-content: center;
+}
+
+.modal2.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fade-slide-in 0.3s ease-out forwards;
+}
+.modal2 {
+  position: fixed;
+  z-index: 100;
+  width: 80%;
+  top: 30vh;
+  left: 10%;
+  display: none;
+}
+#button-container__modal2{
+  display: flex;
+  justify-content: space-between;
+}
+
+#title-game-over{
+  text-align: center;
+}
+#sub-score-board{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+#score-user{
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+#correct-answer{
+  height: 4rem;
+}
+
+@media (min-width: 768px) {
+  .modal {
+    width: 40rem;
+    left: calc(50% - 20rem);
+  }
+}
+
+@keyframes fade-slide-in {
+  from {
+    transform: translateY(-5rem);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+

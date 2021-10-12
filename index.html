@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Trivia Games</title>
+    <link rel="stylesheet" href="assets/styles/app.css" />
+    <script src="assets/scripts/api.js" defer></script>
+    <script src="assets/scripts/vendor.js" defer></script>
+    <script src="assets/scripts/app.js" defer></script>
+  </head>
+  <body>
+    <div id="backdrop"></div>
+    <div class="modal card" id="add-modal">
+      <p>
+        <h1 id="title-game-over">GAME OVER</h1>
+      </p>
+      <p id="paragraph-final-score">
+        <b>The final score is: </b><label id="final-score"></label>
+      </p>
+      <p id="paragraph-answer-given-correct">
+        <b>The Correct answer are:</b>
+        <label id="answer-given-correct"></label>
+      </p>
+      <div class="modal__actions">
+        <h2 >Do you want save your score?</h2>
+        <button class="btn btn--success">Yes</button>
+        <button class="btn btn--passive">No</button>
+      </div>
+    </div>
+    <div class="modal2 card" id="add-modal_2">
+      <h1>Insert your <b>Username</b> and <b>password</b></h1>
+      <div class="modal__content">
+        <label for="title">Username</label>
+        <input type="text" name="title" id="title" />
+        <label for="image-url">Password</label>
+        <input type="text" name="title" id="title" />
+        <div id="button-container__modal2">
+          <button disable="false" class="btn btn--passive2" id="delete-button-passive2">Delete</button>
+          <button disable="false" class="btn btn--success2" id="send-button-passive2">Send</button>
+        </div>
+      </div>
+    </div>
+    <section id="container-top-head">
+      <p id="actual-score"><b>ACTUAL SCORE:</b> <label   id="actual-score-text">0</label></p>
+      <p id="answer-given"><b>ANSWER GIVEN:</b> <label   id="answer-given-text">0</label></p>
+    </section>
+    <section id="container-head-title">
+      <h1 id="title-game"></h1>
+      <p id="category"></p>
+      <p id="difficulty"></p>
+      <div id="question"></div>
+      <ul  id="questions-container" ></ul>
+      <div id="container-btn" >
+        <div id="correct-answer"></div>
+        <button disabled id="previous-btn">PREVIOUS</button>
+        <button disabled id="next-btn">NEXT</button>  
+      </div>
+    </section>
+    <section id="score-board_">
+      <h2>SCORE BOARD</h2>
+      <ul id="sub-score-board"></ul>
+    </section>
+  </body>
+</html>
